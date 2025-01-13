@@ -43,11 +43,16 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
 }
 
 .faq-answer:not(.hidden) {
     max-height: 500px;
-    transition: max-height 0.5s ease-in;
+    opacity: 1;
+    transform: translateY(0);
+    padding-top: 1rem;
 }
 
 /* Glassmorphism */
