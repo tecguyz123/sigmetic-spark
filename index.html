@@ -1,17 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sigmetic-spark</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigmetic - Empower Your Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="font-lexend bg-gradient-to-br from-gray-900 to-black text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 backdrop-blur-lg bg-black/30 border-b border-white/10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-primary">Sigmetic</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="hover:text-primary transition-colors">Features</a>
+                    <a href="#how-it-works" class="hover:text-primary transition-colors">How it Works</a>
+                    <a href="#pricing" class="hover:text-primary transition-colors">Pricing</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button class="bg-primary hover:bg-primary/80 text-black font-medium px-6 py-2 rounded-full transition-all transform hover:scale-105">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <div id="root"></div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden" id="hero">
+        <div class="absolute w-[500px] h-[500px] bg-primary/30 rounded-full blur-3xl -top-20 -left-20 animate-pulse"></div>
+        <div class="absolute w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-3xl -bottom-20 -right-20 animate-pulse delay-1000"></div>
+        <div class="container mx-auto px-6 py-20 relative">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+                    Empower Your Business with 
+                    <span class="text-primary">Actionable Insights</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 animate-fade-in-delay">
+                    Discover what your customers truly feel and turn their feedback into measurable growth.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-delay-2">
+                    <button class="glass-button">
+                        Get Started for Free
+                    </button>
+                    <button class="glass-button-outline">
+                        Explore Features
+                    </button>
+                </div>
+                <div class="glass-card p-8 animate-fade-in-delay-3">
+                    <img src="https://placehold.co/1200x600" alt="Dashboard Preview" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                All-in-One Feedback Management Made 
+                <span class="text-primary">Simple</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Cards -->
+                <div class="glass-card hover-card">
+                    <i class="fas fa-chart-line text-4xl text-primary mb-6"></i>
+                    <h3 class="text-xl font-semibold mb-4">Smart Analytics</h3>
+                    <p class="text-gray-300">Track trends, detect issues, and get AI-powered recommendations tailored to your business.</p>
+                </div>
+                <!-- Repeat for other features -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                How It <span class="text-primary">Works</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Steps -->
+                <div class="glass-card text-center hover-card">
+                    <div class="step-number">1</div>
+                    <h3 class="text-xl font-semibold mb-4">Sign Up for Free</h3>
+                    <p class="text-gray-300">Create an account and set up your business profile.</p>
+                </div>
+                <!-- Repeat for other steps -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Why Choose <span class="text-primary">Sigmetic?</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Benefits -->
+                <div class="glass-card hover-card">
+                    <i class="fas fa-clock text-4xl text-primary mb-6"></i>
+                    <h3 class="text-xl font-semibold mb-4">Save Time</h3>
+                    <p class="text-gray-300">Let AI handle feedback analysis while you focus on your business.</p>
+                </div>
+                <!-- Repeat for other benefits -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Simple Pricing, <span class="text-primary">Big Value</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Free Plan -->
+                <div class="glass-card hover-card">
+                    <h3 class="text-2xl font-bold mb-4">Free Plan</h3>
+                    <p class="text-gray-300 mb-6">Perfect for small businesses starting their feedback journey.</p>
+                    <div class="text-4xl font-bold mb-8">₹0<span class="text-xl font-normal">/month</span></div>
+                    <ul class="space-y-4 mb-8">
+                        <li><i class="fas fa-check text-primary mr-2"></i>1 feedback form</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Basic analytics</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Limited insights</li>
+                    </ul>
+                    <button class="glass-button w-full">Start for Free</button>
+                </div>
+                <!-- Pro Plan -->
+                <div class="glass-card hover-card border-primary">
+                    <div class="absolute -top-4 right-4 bg-primary text-black px-4 py-1 rounded-full text-sm">Popular</div>
+                    <h3 class="text-2xl font-bold mb-4">Pro Plan</h3>
+                    <p class="text-gray-300 mb-6">Unlock the full power of Sigmetic for advanced insights and growth.</p>
+                    <div class="text-4xl font-bold mb-8">₹10,000<span class="text-xl font-normal">/month</span></div>
+                    <ul class="space-y-4 mb-8">
+                        <li><i class="fas fa-check text-primary mr-2"></i>Unlimited forms</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Advanced AI insights</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Custom reports</li>
+                        <li><i class="fas fa-check text-primary mr-2"></i>Priority support</li>
+                    </ul>
+                    <button class="glass-button w-full">Upgrade to Pro</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Got Questions? <span class="text-primary">We've Got Answers!</span>
+            </h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ Items -->
+                <div class="glass-card hover-card cursor-pointer faq-item">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl font-semibold">What is Sigmetic?</h3>
+                        <i class="fas fa-plus text-primary"></i>
+                    </div>
+                    <div class="faq-answer hidden mt-4">
+                        A feedback management and analytics tool.
+                    </div>
+                </div>
+                <!-- Repeat for other FAQs -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                We're Here to <span class="text-primary">Help!</span>
+            </h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="glass-card">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" class="glass-input" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" class="glass-input" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea class="glass-input h-32" required></textarea>
+                        </div>
+                        <button type="submit" class="glass-button w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-primary mb-6">Sigmetic</h3>
+                    <p class="text-gray-300">Empowering businesses with actionable customer insights.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary">Pricing</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300">support@sigmetic.com</li>
+                        <li class="text-gray-300">+91-123-456-7890</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-primary"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-primary"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-primary"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-white/10 text-center text-gray-300">
+                © 2025 Sigmetic. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
