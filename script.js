@@ -16,24 +16,36 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 
 // FAQ accordion functionality
-document.querySelectorAll('.faq-item').forEach(item => {
-    item.addEventListener('click', function() {
-        const answer = this.querySelector('.faq-answer');
-        const icon = this.querySelector('i');
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('h3');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('i');
         
-        // Close all other answers
-        document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
-            if (otherAnswer !== answer) {
-                otherAnswer.classList.add('hidden');
-                otherAnswer.parentElement.querySelector('i').classList.remove('fa-minus');
-                otherAnswer.parentElement.querySelector('i').classList.add('fa-plus');
+        question.addEventListener('click', () => {
+            // Close all other answers
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherIcon = otherItem.querySelector('i');
+                    otherAnswer.classList.add('hidden');
+                    otherIcon.classList.remove('fa-minus');
+                    otherIcon.classList.add('fa-plus');
+                }
+            });
+            
+            // Toggle current answer
+            answer.classList.toggle('hidden');
+            if (answer.classList.contains('hidden')) {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            } else {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
             }
         });
-
-        // Toggle current answer
-        answer.classList.toggle('hidden');
-        icon.classList.toggle('fa-plus');
-        icon.classList.toggle('fa-minus');
     });
 });
 

@@ -40,19 +40,25 @@
 
 /* FAQ Accordion animations */
 .faq-answer {
-    max-height: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .faq-answer:not(.hidden) {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
+    height: auto;
     padding-top: 1rem;
+}
+
+.faq-item {
+    cursor: pointer;
+}
+
+.faq-item h3 {
+    user-select: none;
 }
 
 /* Glassmorphism */
