@@ -15,12 +15,22 @@ function reveal() {
 
 window.addEventListener('scroll', reveal);
 
-// FAQ accordion
+// FAQ accordion functionality
 document.querySelectorAll('.faq-item').forEach(item => {
-    item.addEventListener('click', () => {
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('i');
+    item.addEventListener('click', function() {
+        const answer = this.querySelector('.faq-answer');
+        const icon = this.querySelector('i');
         
+        // Close all other answers
+        document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+            if (otherAnswer !== answer) {
+                otherAnswer.classList.add('hidden');
+                otherAnswer.parentElement.querySelector('i').classList.remove('fa-minus');
+                otherAnswer.parentElement.querySelector('i').classList.add('fa-plus');
+            }
+        });
+
+        // Toggle current answer
         answer.classList.toggle('hidden');
         icon.classList.toggle('fa-plus');
         icon.classList.toggle('fa-minus');

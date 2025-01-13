@@ -19,6 +19,37 @@
     border-color: var(--primary);
 }
 
+/* Container spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 4rem;
+    }
+}
+
+/* FAQ Accordion animations */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer:not(.hidden) {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+}
+
 /* Glassmorphism */
 .glass-card {
     background: rgba(255, 255, 255, 0.05);
